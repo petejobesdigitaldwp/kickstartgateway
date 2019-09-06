@@ -481,8 +481,8 @@
       { areatype: 'Local authority', name: 'York' }
       
       ]
-      const checkMatch = results.filter(result => 
-       result.name.toLowerCase().indexOf(query.toLowerCase()) !== -1 // || result.areatype.toLowerCase().indexOf(query.toLowerCase()) !== -1
+      const checkMatch = results.filter( function(result){
+       return result.name.toLowerCase().indexOf(query.toLowerCase()) !== -1; } // || result.areatype.toLowerCase().indexOf(query.toLowerCase()) !== -1
       )
       matchedResults(checkMatch)
     }
