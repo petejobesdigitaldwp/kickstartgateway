@@ -1,0 +1,354 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Skills | North East | Local enterprise partnership | Explore the digital skills market by area
+{% endblock %}
+
+{% block content %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="where.html">Home</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="lep-ne.html">North East</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Skillsets in demand</li>
+        </ol>
+      </div>
+
+  <div class="govuk-grid-row govuk-!-margin-bottom-2">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
+        Skillsets in demand in the North East
+      </h1>
+        <p class="last-update">This data was last updated in March 2019</p>
+
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row govuk-!-margin-bottom-5">
+
+    <div class="govuk-grid-column-one-third">
+    
+        <form class="form" action="lep-ne-gva.html">
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                    <strong>Skill title</strong>
+                  </label>
+                <div id="autocomplete"></div>
+            </div>
+            
+    
+        </form>
+    </div>
+
+      <div class="govuk-grid-column-one-third">
+    
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                  <strong>Skill category</strong>
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="all" selected>All categories</option>
+                  <option>Accounting and Finance</option>
+                  <option>Administration and HR</option>
+                  <option>Business Analysis</option>
+                  <option>Catering and Hospitality</option>
+                  <option>Construction</option>
+                  <option>Data Security and Governance</option>
+                  <option>Electronics</option>
+                  <option>Engineering and Design</option>
+                  <option>Graphic Design</option>
+                  <option>IT Hardware and Networks</option>
+                  <option>Law</option>
+                  <option>Management and Strategy</option>
+                  <option>Marketing</option>
+                  <option>Nursing and Healthcare</option>
+                  <option>Sales</option>
+                  <option>Science and Pharmaceuticals</option>
+                  <option>Teaching and Classroom</option>
+                  <option>Utilities and Maintenance</option>
+                  <option>Web and Software Development</option>
+                </select>
+          </div>
+  
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <form class="form" action="lep-ne-gva.html">
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                  <strong>How digital is this skill</strong>
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="all" selected>Show all skills</option>
+                  <option value="digital">Highly digital</option>
+                  <option value="Low">Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+          </div>
+          
+  
+      </form>
+    </div>
+
+   
+
+  </div>
+
+  <!--<div class="govuk-grid-row govuk-!-margin-bottom-7">
+      <div class="govuk-grid-column-one-half">
+          <div class="dynamic-filter-box">
+            <div class="figure">893</div>
+            <div class="filter-desc">skills at <strong>all levels of digital</strong><button class="btn-remove btn-inline" type="button">×</button> in the <strong>Graphic Design skills</strong><button class="btn-remove btn-inline" data-filter="department" type="button">×</button> category</div>
+            <div class="clearfix"></div>
+          </div>
+          
+      </div>
+  </div>-->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <p class="show-with-responsive-table"><strong>Sort skills by:</strong></p>
+        <table class="govuk-table sort-filter-table sortable responsive-table govuk-!-margin-bottom-5">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+
+                <th class="govuk-table__header" scope="col"><span class="th-sort-link">Skill</span></th>
+              <th class="govuk-table__header" scope="col"><span class="th-sort-link">Category</span></th>
+              <th class="govuk-table__header" scope="col"><span class="th-sort-link">How digital</span></th>
+              <th class="govuk-table__header" scope="col"><span class="th-sort-link">Demand</span></th>
+              <th class="govuk-table__header" scope="col"><span class="th-sort-link">Change</span></th>
+              <th class="govuk-table__header" scope="col"><span class="th-sort-link">Salary range</span></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row"><a href="lep-ne-skills-teaching">Teaching</a></th>
+                  <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Education, languages and art </td>
+                  <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>High</td>              
+                  <td class="govuk-table__cell" sorttable_customkey="16"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>—</td>
+                  <td class="govuk-table__cell"  sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>—</td>
+                  <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>—</td>
+                </tr>
+
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row"><a href="#">Graphic and digital design</a></th>
+                  <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Design</td>
+                  <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>Medium</td>
+                  <td class="govuk-table__cell"  sorttable_customkey="6"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Very high</td>
+              <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Not changing</td>
+              <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row"><a href="#">Financial asset management</a></th>
+                    <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Finance</td>
+                  <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>High</td>
+                  <td class="govuk-table__cell" sorttable_customkey="7"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Very high</td>
+              <td class="govuk-table__cell" sorttable_customkey="1"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Increasing</td>
+              <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+                </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row"><a href="lep-ne-skills-javascript.html">Retail management</a></th>
+                <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Management and HR</td>
+              <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>High</td>
+              <td class="govuk-table__cell" sorttable_customkey="1"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Very high</td>
+              <td class="govuk-table__cell" sorttable_customkey="2"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Increasing</td>
+              <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+            </tr>
+           
+
+                  <tr class="govuk-table__row">
+                      <th class="govuk-table__header" scope="row"><a href="#">Pharmacy</a></th>
+                      <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Healthcare administration</td>
+                        <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>Medium</td>
+                        <td class="govuk-table__cell" sorttable_customkey="8"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Very high</td>
+                <td class="govuk-table__cell" sorttable_customkey="4"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Decreasing</td>
+                <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="row"><a href="#">IT Support</a></th>
+                          <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>IT systems and support</td>
+                        <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>High</td>
+                        <td class="govuk-table__cell" sorttable_customkey="9"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Very high</td>
+                <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Not changing</td>
+                <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="row"><a href="#">Driving and automotive maintenace</a></th>
+                          <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Construction, maintenance and transport</td>
+                            <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>Low</td>
+                            <td class="govuk-table__cell" sorttable_customkey="10"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Very high</td>
+                <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Not changing</td>
+                <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£35,000 - £58,000</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <th class="govuk-table__header" scope="row"><a href="#">Software development</a></th>
+                              <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Software Engineering</td>
+                            <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>High</td>
+                            <td class="govuk-table__cell"  sorttable_customkey="11"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>High</td>
+                <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Not changing</td>
+                <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <th class="govuk-table__header" scope="row"><a href="#">Accounting admin</a></th>
+                              <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Accounting</td>
+                            <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>Low</td>
+                            <td class="govuk-table__cell" sorttable_customkey="12"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>High</td>
+                <td class="govuk-table__cell" sorttable_customkey="2"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Decreasing</td>
+                <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£22,000 - £40,000</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <th class="govuk-table__header" scope="row"><a href="#">Office admin</a></th>
+                              <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Administration and Law</td>
+                                <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>Low</td>
+                                <td class="govuk-table__cell" sorttable_customkey="13"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>High</td>
+                                <td class="govuk-table__cell" sorttable_customkey="2"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Increasing</td>
+                                <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£14,000 - £20,000</td>
+                              </tr>
+
+                              <tr class="govuk-table__row">
+                                  <th class="govuk-table__header" scope="row"><a href="#">Social work and caregiving</a></th>
+                                  <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Caregiving and rehabilitation</td>
+                                  <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>High</td>
+                                  <td class="govuk-table__cell" sorttable_customkey="4"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Very high</td>
+                                    <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Not changing</td>
+                                    <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="row"><a href="#">Mental health</a></th>
+                                    <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Care giving and rehabilitation</td>
+                                  <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>High</td>
+                                  <td class="govuk-table__cell" sorttable_customkey="5"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Very high</td>
+                                    <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Not changing</td>
+                                    <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+                                </tr>
+
+                              <tr class="govuk-table__row">
+                                  <th class="govuk-table__header" scope="row"><a href="#">Retail</a></th>
+                                  <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Sales</td>
+                                <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>Medium</td>
+                                <td class="govuk-table__cell" sorttable_customkey="14"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>High</td>
+                <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Not changing</td>
+                <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                  <th class="govuk-table__header" scope="row"><a href="#">Procurement</a></th>
+                                  <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Logistics</td>
+                                  <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>Low</td>
+                                  <td class="govuk-table__cell" sorttable_customkey="15"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>High</td>
+                          <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Not changing</td>
+                          <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£17,000 - £32,000</td>
+                                </tr>
+                               
+                                    <tr class="govuk-table__row">
+                                        <th class="govuk-table__header" scope="row"><a href="#">Screening and immunisation</a></th>
+                                        <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Primary care</td>
+                                      <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>Low</td>
+                                      <td class="govuk-table__cell" sorttable_customkey="17"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>High</td>
+                          <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Not changing</td>
+                          <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£16,000 - £38,000</td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                        <th class="govuk-table__header" scope="row"><a href="#">Construction engineering</a></th>
+                                        <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Civil engineering and design</td>
+                                      <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>High</td>
+                                      <td class="govuk-table__cell" sorttable_customkey="18"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Medium</td>
+                          <td class="govuk-table__cell" sorttable_customkey="2"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Increasing</td>
+                          <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                        <th class="govuk-table__header" scope="row"><a href="#">Welding and machining</a></th>
+                                        <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Construction, maintenance and transport</td>
+                                          <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>Medium</td>                                         
+                                          <td class="govuk-table__cell" sorttable_customkey="19"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Medium</td>
+                                          <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Not changing</td>
+                                          <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <th class="govuk-table__header" scope="row"><a href="#">Health, safety and environment</a></th>
+                                            <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Energy and environmental management</td>
+                                          <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>Low</td>
+                                          <td class="govuk-table__cell" sorttable_customkey="20"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Medium</td>
+                          <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Not changing</td>
+                          <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£15,000 - £22,000</td>
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <th class="govuk-table__header" scope="row"><a href="#">General sales</a></th>
+                                            <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Sales</td>
+                                            <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>High</td>
+                                            <td class="govuk-table__cell" sorttable_customkey="2"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Very high</td>
+                                            <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Not changing</td>
+                                            <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <th class="govuk-table__header" scope="row"><a href="#">Marketing research</a></th>
+                                            <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Category: </span>Marketing</td>
+                                          <td class="govuk-table__cell" ><span aria-hidden="true" class="show-with-responsive-table">Digital level: </span>Medium</td>
+                                          <td class="govuk-table__cell" sorttable_customkey="3"><span aria-hidden="true" class="show-with-responsive-table">Demand: </span>Very high</td>
+                                            <td class="govuk-table__cell" sorttable_customkey="1"><span aria-hidden="true" class="show-with-responsive-table">Change: </span>Increasing</td>
+                                            <td class="govuk-table__cell"><span aria-hidden="true" class="show-with-responsive-table">Salary range: </span>£30,000 - £50,000</td>
+                                        </tr>
+          </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+    <div class="govuk-grid-row govuk-!-margin-top-4">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-m">About this data</h2>
+        <p>
+            We work out the demand for skills by looking at how often they are asked for in job adverts. Job adverts are collected by Adzuna.
+          </p>
+      </div>
+    </div>
+
+</div>
+
+{% include "includes/feedback.html" %}
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<script type="text/javascript">
+  
+  const dataitems = [
+  'Javascript',
+  'React',
+  'CSS',
+  'HTML',
+  'Data science',
+  'Node'
+]
+
+accessibleAutocomplete({
+  element: document.querySelector('#autocomplete'),
+  displayMenu: 'overlay',
+  id: 'autocomplete', // To match it to the existing <label>.
+  source: dataitems
+})
+
+
+</script>
+
+
+<script type="text/javascript" src="../../public/javascripts/sorttable.js"></script>
+
+{% endblock %}

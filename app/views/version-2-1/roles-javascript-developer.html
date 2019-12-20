@@ -1,0 +1,161 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Javascript developer | Explore the digital skills market by area
+{% endblock %}
+
+{% block content %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="what.html">Home</a></li>
+      <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="what-role.html">Roles</a></li>
+      <li class="govuk-breadcrumbs__list-item" aria-current="page">Javascript developer</li>
+    </ol>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+        Javascript developer
+      </h1>
+      <p class="govuk-body-l govuk-!-margin-bottom-3"><strong>Role</strong> in the Web and Software Development roles category</p>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+        
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <p class="last-update">This data was last updated in January 2019</p>
+</div>
+</div>
+
+
+
+<div class="govuk-grid-row  govuk-!-margin-bottom-5">
+  <div class="govuk-grid-column-one-third">
+      <div class="headline-stat-box section-border-top">
+          <span class="title">Employer demand</span>
+          <span class="figure">Very high</span>
+          <div class="detail govuk-body-s">
+              <p class="govuk-body-s">Relative to other skills within this area.</p>
+              <p class="govuk-body-s govuk-!-margin-bottom-0"><strong>1,604</strong> vacancies ask for this skillset. This is <strong>0.079%</strong> of all vacancies in Great Britain.</p>
+          </div>
+      </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+      <div class="headline-stat-box section-border-top">
+          <span class="title">Average salary range</span>
+          <span class="figure">£40,000 to £72,000</span>
+          <div class="detail govuk-body-s">
+            <p class="govuk-body-s govuk-!-margin-bottom-0">in Great Britain for this role in August 2019.</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="govuk-grid-row  govuk-!-margin-bottom-5">
+
+    <div class="govuk-grid-column-full">
+        <hr>
+        </div>
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Where the Javascript developer role is in demand</h2>
+        <div class="govuk-tabs" data-module="govuk-tabs">
+            <div class="govuk-tabs" data-module="tabs">
+                <h2 class="govuk-tabs__title">
+                  Contents
+                </h2>
+              
+                <ul class="govuk-tabs__list">
+                  <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#heatmap">
+                      Heatmap
+                    </a>
+                  </li>
+                  <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#table">
+                      Table of data
+                    </a>
+                  </li>
+                </ul>
+            <section class="govuk-tabs__panel" id="heatmap">
+              
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-three-quarters">
+                    <h3 class="govuk-heading-m govuk-!-margin-bottom-3">Heatmap</h3>
+                    <span class="govuk-hint">Select an area on the map to view more information</span>
+                </div>
+                </div>
+
+
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <img src="../../public/images/gb-map.png" class="full-width-image"/>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <h3 class="govuk-heading-s"><a href="place-newcastle-upon-tyne-health-public-services-care">Newcastle upon Tyne</a></h3>
+
+                    <div class="govuk-heading-s govuk-!-margin-bottom-1">
+                        <strong>Employer demand</strong>
+                      </div>
+                      <div class="govuk-body-s label extra-annotation-emp">
+                        <span class="figure-emp">High</span>
+                        <p class="govuk-body-s govuk-!-margin-top-2"><strong>10</strong> vacancies ask for this skillset. This is <strong>0.083%</strong> of all vacancies in the area.</p>
+                      </div>
+
+                      <div class="govuk-heading-s govuk-!-margin-bottom-1">
+                          <strong>Average salary range</strong>
+                        </div>
+                        <div class="govuk-body-s label extra-annotation-emp">
+                          <span class="figure-emp">£26,000 to £28,000</span>
+                        </div>
+                </div>
+            </section>
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="table">
+              
+            </section>
+
+          </div>
+    </div>
+    </div>
+
+</div>
+  
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">About this data</h2>
+          <p>We work this out by looking at the content of job adverts for this role. We match the location listed in the adverts with locations in this area. Job adverts are collected by the Adzuna job adverts aggregation website.</p>
+<p>This data was last updated at the end of February 2019.</p>
+      </div>
+</div>
+    </div>
+
+    {% include "includes/feedback.html" %}
+
+    {% endblock %}
+    
+    {% block pageScripts %}
+    
+    
+
+
+<script type="text/javascript" src="../../public/javascripts/sorttable.js"></script>
+
+{% endblock %}
