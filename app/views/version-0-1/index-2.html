@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a Kickstart Gateway
+{% endblock %}
+
+{% block content %}
+
+
+      
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            How to find someone to apply on your behalf
+          </h1>
+          <p>Use this list to find a Kickstart gateway that may be able to support you in applying for a Kickstart Scheme grant.</p>
+          <p>You may be looking for support with different things, for example in a specific area or sector. You can contact more than one organisation to see which one can best support your needs.</p>
+          <p>These organisations have told the Department for Work and Pensions (DWP) that they’re interested in helping employers. The list will be continually updated.</p>
+          <p>DWP have checked these organisations using the Cabinet Office Spotlight Tool. Partnering with one of these organisations does not guarantee that you will get Kickstart Scheme funding.</p>
+
+
+
+
+      {{ govukButton({
+        text: "Continue",
+        href: "where"
+    }) }}
+
+
+    </div>
+
+</div>
+
+{% endblock %}

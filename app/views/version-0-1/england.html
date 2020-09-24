@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-What region would you like to find a Kickstart Gateway from? | Find a Kickstart Gateway
+What region are your roles based in? | Find a Kickstart Gateway
 {% endblock %}
 
 {% block content %}
@@ -17,19 +17,13 @@ What region would you like to find a Kickstart Gateway from? | Find a Kickstart 
         <fieldset class="govuk-fieldset" id="where_fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
-                What region would you like to find a Kickstart Gateway from?
+                What region are your roles based in?
             </h1>
-            <span class="govuk-hint">You can choose a gateway that operates across England, or one specific to your region.</span>
           </legend> 
           <div class="govuk-form-group">
               <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="radios-1" name="place" type="radio" value="nationwide">
-                    <label class="govuk-label govuk-radios__label" for="radios-1">
-                      England wide
-                    </label>
-                  </div>
-                  <div class="govuk-radios__divider">or</div>
+                  
+                  
                   <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="radios-2" name="place" type="radio" value="nationwide">
                       <label class="govuk-label govuk-radios__label" for="radios-2">
@@ -85,6 +79,15 @@ What region would you like to find a Kickstart Gateway from? | Find a Kickstart 
                                       </label>
                                     </div>
 
+                                    <div class="govuk-radios__divider">or</div>
+
+
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="radios-1" name="place" type="radio" value="nationwide">
+                                        <label class="govuk-label govuk-radios__label" for="radios-1">
+                                          Multiple regions
+                                        </label>
+                                      </div>
                   
                 </div>
           </div>
