@@ -46,6 +46,10 @@ $govuk-global-styles: true;
   width:100%;
 }
 
+.table-smaller-text {
+  font-size:16px;
+}
+
 // Phase banner correction
 
 .govuk-phase-banner { margin-top:-30px; margin-bottom:30px; }
