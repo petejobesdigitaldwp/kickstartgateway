@@ -16,18 +16,12 @@ Where would you like to find a Kickstart Gateway? | Find a Kickstart Gateway
         <fieldset class="govuk-fieldset" id="where_fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
-                Where would you like to find a Kickstart Gateway? 
+                Where would you like the gateway to serve? 
             </h1>
-            <span class="govuk-hint">You can choose a gateway that operates nationwide or one within the country where the job role is based.</span>
+            
           </legend> 
           <div class="govuk-form-group">
               <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="radios-1" name="place" type="radio" value="nationwide">
-                    <label class="govuk-label govuk-radios__label" for="radios-1">
-                      Nationwide
-                    </label>
-                  </div>
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="radios-2" name="place" type="radio" value="england">
                     <label class="govuk-label govuk-radios__label" for="radios-2">
@@ -63,11 +57,6 @@ Where would you like to find a Kickstart Gateway? | Find a Kickstart Gateway
 {% block pageScripts %}
 
 <script type="text/javascript">
-
-          document.getElementById("radios-1").onclick = function () {
-            var link = "national";
-            document.getElementById("question-form").action=link;
-          }
 
           document.getElementById("radios-2").onclick = function () {
             var link = "england";

@@ -39,6 +39,12 @@ Find a Kickstart Gateway
                         Find all gateways that serve my area
                       </label>
                     </div>
+                    <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-to-find-3" name="how-to-find" type="radio" value="scotland">
+                            <label class="govuk-label govuk-radios__label" for="how-to-find-3">
+                              Find gateways that serve the whole country
+                            </label>
+                          </div>
                   </div>
               
                 </fieldset>
@@ -65,6 +71,10 @@ Find a Kickstart Gateway
       document.getElementById("question-form").action=link;
     }
 
+    document.getElementById("how-to-find-3").onclick = function () {
+      var link = "national";
+      document.getElementById("question-form").action=link;
+    }
 </script>
 
 {% endblock %}
