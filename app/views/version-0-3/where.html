@@ -1,0 +1,78 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Where would you like to find a Kickstart Gateway? | Find a Kickstart Gateway
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" class="form" id="question-form" action="national">
+
+        <fieldset class="govuk-fieldset" id="where_fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+                Where would you like the gateway to serve? 
+            </h1>
+            
+          </legend> 
+          <div class="govuk-form-group">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="radios-2" name="place" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="radios-2">
+                      England
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="radios-3" name="place" type="radio" value="scotland">
+                      <label class="govuk-label govuk-radios__label" for="radios-3">
+                        Scotland
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="radios-4" name="place" type="radio" value="wales">
+                        <label class="govuk-label govuk-radios__label" for="radios-4">
+                          Wales
+                        </label>
+                      </div>
+                </div>
+          </div>
+        </fieldset>
+
+        <button class="govuk-button">Continue</button>
+
+    </form>
+    
+     
+  </div>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<script type="text/javascript">
+
+          document.getElementById("radios-2").onclick = function () {
+            var link = "england";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-3").onclick = function () {
+            var link = "scotland";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-4").onclick = function () {
+            var link = "wales";
+            document.getElementById("question-form").action=link;
+          }
+
+</script>
+
+{% endblock %}
