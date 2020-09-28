@@ -1,0 +1,45 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a Kickstart Gateway
+{% endblock %}
+
+{% block content %}
+
+
+      
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Apply for a Kickstart Scheme Grant for Employers
+          </h1>
+      <p>Use this service to apply for a Kickstart Scheme employer grant. You can use this service if you are an employer or represent a group of employers and have 30 or more Kickstart job placements.</p>
+      <p><a href="https://gov.uk/guidance/check-if-you-can-apply-for-a-grant-through-the-kickstart-scheme">Check if you can apply</a> for a grant through the Kickstart Scheme.</p>
+
+      {{ govukButton({
+        text: "Start now",
+        href: "how-many-roles",
+        classes: "govuk-button--start"
+    }) }}
+
+    <p>The online service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
+
+    <h2 class="govuk-heading-l">Before you start</h2>
+
+     
+      <p>You will need:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>the Companies House reference number or Charity Commission number</li>
+            <li>the organisation address and contact details</li>
+            <li>details of the Kickstart Scheme job placements and their location</li>
+            <li>supporting information to show that the job placements are new jobs and meet the <a href="">Kickstart Scheme criteria</a></li>
+            <li>information about the support the organisation can give to develop employability skills of young people</li>
+          </ul>
+
+
+    </div>
+
+</div>
+
+{% endblock %}
