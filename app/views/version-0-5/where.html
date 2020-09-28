@@ -1,0 +1,146 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Where would you like to find a Kickstart Gateway? | Find a Kickstart Gateway
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" class="form" id="question-form" action="/version-0-5/east-midlands#nottinghamshire" >
+
+        <fieldset class="govuk-fieldset" id="where_fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+                Where are you based? 
+            </h1>
+            <span class="govuk-hint">You can search for a country, a region or a county.</span>
+          </legend> 
+          <div class="govuk-form-group">
+              <div id="autocomplete"></div>
+            </div>
+        </fieldset>
+
+        <button class="govuk-button">Continue</button>
+
+    </form>
+    
+     
+  </div>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<script type="text/javascript">
+
+
+/*global accessibleAutocomplete*/
+function customResults (query, matchedResults) {
+  var results = [
+  { areatype: 'Country', name: 'England' },
+  { areatype: 'Country', name: 'Scotland' },
+  { areatype: 'Country', name: 'Wales' },
+
+  { areatype: 'Region', name: 'East Midlands' },
+  { areatype: 'Region', name: 'East of England' },
+  { areatype: 'Region', name: 'London' },
+  { areatype: 'Region', name: 'North East' },
+  { areatype: 'Region', name: 'North West' },
+  { areatype: 'Region', name: 'South East' },
+  { areatype: 'Region', name: 'South West' },
+  { areatype: 'Region', name: 'West Midlands' },
+  { areatype: 'Region', name: 'Yorkshire and the Humber' },
+
+  { areatype: 'County', name: 'Buckinghamshire' },
+  { areatype: 'County', name: 'Bedfordshire' },
+  { areatype: 'County', name: 'Berkshire' },
+  { areatype: 'County', name: 'Cambridgeshire' },
+  { areatype: 'County', name: 'Cheshire' },
+  { areatype: 'County', name: 'County Durham' },
+  { areatype: 'County', name: 'Cornwall' },
+  { areatype: 'County', name: 'Cumbria' },
+  { areatype: 'County', name: 'Darlington' },
+  { areatype: 'County', name: 'Derbyshire' },
+  { areatype: 'County', name: 'Devon' },
+  { areatype: 'County', name: 'Dorset' },
+  { areatype: 'County', name: 'Essex' },
+  { areatype: 'County', name: 'East Sussex' },
+  { areatype: 'County', name: 'East Riding of Yorkshire' },
+  { areatype: 'County', name: 'Greater London' },
+  { areatype: 'County', name: 'Greater Manchester' },
+  { areatype: 'County', name: 'Gloucestershire' },
+  { areatype: 'County', name: 'Hampshire' },
+  { areatype: 'County', name: 'Hartlepool' },
+  { areatype: 'County', name: 'Herefordshire' },
+  { areatype: 'County', name: 'Hertfordshire' },
+  { areatype: 'County', name: 'Isle of Wight' },
+  { areatype: 'County', name: 'Kent' },
+  { areatype: 'County', name: 'Lancashire' },
+  { areatype: 'County', name: 'Leicestershire' },
+  { areatype: 'County', name: 'Lincolnshire' },
+  { areatype: 'County', name: 'Merseyside' },
+  { areatype: 'County', name: 'Middlesbrough' },
+  { areatype: 'County', name: 'Norfolk' },
+  { areatype: 'County', name: 'North East Lincolnshire' },
+  { areatype: 'County', name: 'North Lincolnshire' },
+  { areatype: 'County', name: 'North Yorkshire' },
+  { areatype: 'County', name: 'Northamptonshire' },
+  { areatype: 'County', name: 'Northumberland' },
+  { areatype: 'County', name: 'Nottinghamshire' },
+  { areatype: 'County', name: 'Oxfordshire' },
+  { areatype: 'County', name: 'Redcar and Cleveland' },
+  { areatype: 'County', name: 'Rutland' },
+  { areatype: 'County', name: 'Shropshire' },
+  { areatype: 'County', name: 'Somerset' },
+  { areatype: 'County', name: 'South Yorkshire' },
+  { areatype: 'County', name: 'Staffordshire,' },
+  { areatype: 'County', name: 'Stockton-on-Tees' },
+  { areatype: 'County', name: 'Suffolk' },
+  { areatype: 'County', name: 'Surrey' },
+  { areatype: 'County', name: 'Tyne and Wear' },
+  { areatype: 'County', name: 'Warwickshire' },
+  { areatype: 'County', name: 'West Midlands' },
+  { areatype: 'County', name: 'West Yorkshire' },
+  { areatype: 'County', name: 'West Sussex' },
+  { areatype: 'County', name: 'Wiltshire' },
+  { areatype: 'County', name: 'Worcestershire' },
+
+
+  
+  ]
+  const checkMatch = results.filter(result => 
+   result.name.toLowerCase().indexOf(query.toLowerCase()) !== -1 // || result.areatype.toLowerCase().indexOf(query.toLowerCase()) !== -1
+  )
+  matchedResults(checkMatch)
+}
+
+function inputValueTemplate (result) {
+return result && result.name
+}
+
+function suggestionTemplate (result) {
+return result && '<span class=\'areaname\'>' + result.name + '</span>' +
+  '<span class=\'areatype\'>' + result.areatype + '</span>'
+}
+  
+var element = document.querySelector('#autocomplete');
+accessibleAutocomplete({
+element: element,
+id: 'autocomplete-class',
+source: customResults,
+templates: {
+    inputValue: inputValueTemplate,
+    suggestion: suggestionTemplate
+}
+});
+
+
+</script>
+
+{% endblock %}
