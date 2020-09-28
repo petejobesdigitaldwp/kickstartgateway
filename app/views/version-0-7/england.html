@@ -22,13 +22,15 @@ What region are your roles based in? | Find a Kickstart Gateway
           </legend> 
           <div class="govuk-form-group">
             
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-
-              {{ govukSelect({
-                id: "sort",
-                name: "sort",
-                label: {
-                  text: "Sort by"
+              {{ govukRadios({
+                idPrefix: "where-are-roles",
+                name: "where-are-roles",
+                fieldset: {
+                  legend: {
+                    text: "What county are your roles based in?",
+                    isPageHeading: true,
+                    classes: "govuk-fieldset__legend--xl"
+                  }
                 },
                 items: [
                 { value: "-", text: "Buckinghamshire"},
