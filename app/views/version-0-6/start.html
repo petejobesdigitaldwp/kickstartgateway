@@ -1,0 +1,58 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a Kickstart Gateway
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <img src="../../public/images/kickstart-logo.png" alt="Kickstart Scheme Logo" class="kickstart-logo govuk-!-margin-bottom-9" >
+    </div>
+  </div>
+      
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+            Find a Kickstart Gateway
+          </h1>
+      <p>If you’re creating fewer than 30 job placements, a Kickstart gateway can act on your behalf and apply for a Kickstart Scheme grant for you.</p>
+      <h2 class="govuk-heading-m">How someone can help</h2>
+      <p>They will:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>gather information from you about the job placements you’d like to offer</li>
+            <li>use this information to submit an online application on behalf of a group of employers</li>
+            <li>pass on the relevant payments made by DWP to you (for example the young person’s salary)</li>
+          </ul>
+          <p>They may also:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>share their expertise with you to help you onboard and train young people employed through the scheme, for example supporting those with particular disadvantages or working in certain sectors</li>
+            <li>provide employability support directly to young people employed through the scheme</li>
+          </ul>
+
+
+
+
+      {{ govukButton({
+        text: "Start now",
+        href: "start-2",
+        classes: "govuk-button--start"
+    }) }}
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m related-head">Related help</h3>
+        <ul class="govuk-list">
+            <li><a href="https://www.gov.uk/government/collections/kickstart-scheme">Kickstart Scheme guidance</a></li>
+            <li><a href="https://www.gov.uk/guidance/check-if-you-can-apply-for-a-grant-through-the-kickstart-scheme#if-youre-creating-fewer-than-30-job-placements">Check if you can apply for a grant through the Kickstart Scheme</a></li>
+            <li><a href="https://www.gov.uk/guidance/apply-for-a-grant-through-the-kickstart-scheme">Applying for more than 30 placements</a></li>
+            <li><a href="https://www.gov.uk/guidance/check-if-you-can-apply-for-a-grant-as-a-representative-of-a-group-of-employers-through-the-kickstart-scheme">Find out how you can represent a group of employers</a></li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

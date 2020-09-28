@@ -1,0 +1,124 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What region are your roles based in? | Find a Kickstart Gateway
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" class="form" id="question-form" action="east-midlands#nottinghamshire">
+
+        <fieldset class="govuk-fieldset" id="where_fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+                
+            </h1>
+          </legend> 
+          <div class="govuk-form-group">
+            
+              {{ govukRadios({
+                idPrefix: "where-are-roles",
+                name: "where-are-roles",
+                fieldset: {
+                  legend: {
+                    text: "What county are your roles based in?",
+                    isPageHeading: true,
+                    classes: "govuk-fieldset__legend--xl"
+                  }
+                },
+                items: [
+                { value: "-", text: "Buckinghamshire"},
+                { value: "-", text: "Bedfordshire"},
+                { value: "-", text: "Berkshire"},
+                { value: "-", text: "Cambridgeshire"},
+                { value: "-", text: "Cheshire"},
+                { value: "-", text: "County Durham"},
+                { value: "-", text: "Cornwall"},
+                { value: "-", text: "Cumbria"},
+                { value: "-", text: "Darlington"},
+                { value: "-", text: "Derbyshire"},
+                { value: "-", text: "Devon"},
+                { value: "-", text: "Dorset"},
+                { value: "-", text: "Essex"},
+                { value: "-", text: "East Sussex"},
+                { value: "-", text: "East Riding of Yorkshire"},
+                { value: "-", text: "Greater London"},
+                { value: "-", text: "Greater Manchester"},
+                { value: "-", text: "Gloucestershire"},
+                { value: "-", text: "Hampshire"},
+                { value: "-", text: "Hartlepool"},
+                { value: "-", text: "Herefordshire"},
+                { value: "-", text: "Hertfordshire"},
+                { value: "-", text: "Isle of Wight"},
+                { value: "-", text: "Kent"},
+                { value: "-", text: "Lancashire"},
+                { value: "-", text: "Leicestershire"},
+                { value: "-", text: "Lincolnshire"},
+                { value: "-", text: "Merseyside"},
+                { value: "-", text: "Middlesbrough"},
+                { value: "-", text: "Norfolk"},
+                { value: "-", text: "North East Lincolnshire"},
+                { value: "-", text: "North Lincolnshire"},
+                { value: "-", text: "North Yorkshire"},
+                { value: "-", text: "Northamptonshire"},
+                { value: "-", text: "Northumberland"},
+                { value: "-", text: "Nottinghamshire"},
+                { value: "-", text: "Oxfordshire"},
+                { value: "-", text: "Redcar and Cleveland"},
+                { value: "-", text: "Rutland"},
+                { value: "-", text: "Shropshire"},
+                { value: "-", text: "Somerset"},
+                { value: "-", text: "South Yorkshire"},
+                { value: "-", text: "Staffordshire,"},
+                { value: "-", text: "Stockton-on-Tees"},
+                { value: "-", text: "Suffolk"},
+                { value: "-", text: "Surrey"},
+                { value: "-", text: "Tyne and Wear"},
+                { value: "-", text: "Warwickshire"},
+                { value: "-", text: "West Midlands"},
+                { value: "-", text: "West Yorkshire"},
+                { value: "-", text: "West Sussex"},
+                { value: "-", text: "Wiltshire"},
+                { value: "-", text: "Worcestershire"},
+                {
+                  divider: "or"
+                },
+                {
+                  value: "-",
+                  text: "Multiple counties"
+                }
+                ]
+              }) }}      
+                  
+                  
+                    
+  
+                  
+
+          </div>
+        </fieldset>
+
+        <button class="govuk-button">Continue</button>
+
+    </form>
+    
+     
+  </div>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<script type="text/javascript">
+
+
+</script>
+
+{% endblock %}
