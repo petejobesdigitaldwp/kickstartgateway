@@ -1,0 +1,69 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a Kickstart Gateway
+{% endblock %}
+
+{% block content %}
+
+
+      
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            How to find someone to apply on your behalf
+          </h1>
+          <p>Use this tool to find a Kickstart gateway that may be able to support you in applying for a Kickstart Scheme grant.</p>
+          <p>You may be looking for support with different things, for example in a specific area or sector. You can contact more than one organisation to see which one can best support your needs.</p>
+          <p>These organisations have told the Department for Work and Pensions (DWP) that they’re interested in helping employers. The list will be continually updated.</p>
+          <p>DWP have checked these organisations using the Cabinet Office Spotlight Tool. Partnering with one of these organisations does not guarantee that you will get Kickstart Scheme funding.</p>
+          
+          <form method="post" class="form" id="question-form">
+          <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                            How would you like to find a gateway?  </h1>
+                  </legend>
+                  <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="how-to-find" name="how-to-find" type="radio" value="england">
+                      <label class="govuk-label govuk-radios__label" for="how-to-find">
+                        Find gateways near me
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-to-find-3" name="how-to-find" type="radio" value="scotland">
+                            <label class="govuk-label govuk-radios__label" for="how-to-find-3">
+                              Find gateways that serve multiple areas
+                            </label>
+                          </div>
+                  </div>
+              
+                </fieldset>
+              </div>
+
+              <button class="govuk-button">Continue</button>
+
+            </form>
+
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    document.getElementById("how-to-find").onclick = function () {
+      var link = "where";
+      document.getElementById("question-form").action=link;
+    }
+
+    document.getElementById("how-to-find-3").onclick = function () {
+      var link = "where-serve";
+      document.getElementById("question-form").action=link;
+    }
+</script>
+
+{% endblock %}
