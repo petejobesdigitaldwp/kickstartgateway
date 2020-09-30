@@ -25,26 +25,26 @@ Where would you like to find a Kickstart Gateway? | Find a Kickstart Gateway
                   <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="radios-1" name="place" type="radio" value="england">
                       <label class="govuk-label govuk-radios__label" for="radios-1">
-                        All of England, Scotland and Wales
+                        England, Scotland and Wales
                       </label>
                     </div>
                  
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="radios-2" name="place" type="radio" value="england">
                     <label class="govuk-label govuk-radios__label" for="radios-2">
-                      All of England
+                      England
                     </label>
                   </div>
                   <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="radios-3" name="place" type="radio" value="scotland">
                       <label class="govuk-label govuk-radios__label" for="radios-3">
-                        All of Scotland
+                        Scotland
                       </label>
                     </div>
                     <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="radios-4" name="place" type="radio" value="wales">
                         <label class="govuk-label govuk-radios__label" for="radios-4">
-                          All of Wales
+                          Wales
                         </label>
                       </div>
                 </div>
@@ -64,6 +64,11 @@ Where would you like to find a Kickstart Gateway? | Find a Kickstart Gateway
 {% block pageScripts %}
 
 <script type="text/javascript">
+
+document.getElementById("radios-2").onclick = function () {
+            var link = "national";
+            document.getElementById("question-form").action=link;
+          }
 
 
           document.getElementById("radios-2").onclick = function () {
