@@ -105,6 +105,19 @@ Which region are you in? | Find a Kickstart Gateway
                                           North Yorkshire, East Riding of Yorkshire, North Lincolnshire, North East Lincolnshire, West Yorkshire, South Yorkshire
                                         </div>
                                     </div>
+
+
+                                    <div class="govuk-radios__divider">or</div>
+
+
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="radios-1" name="place" type="radio" value="nationwide">
+                                        <label class="govuk-label govuk-radios__label" for="radios-1">
+                                          Multiple regions
+                                        </label>
+                                      </div>
+
+
                   
                 </div>
           </div>
@@ -124,6 +137,55 @@ Which region are you in? | Find a Kickstart Gateway
 
 <script type="text/javascript">
 
+document.getElementById("radios-1").onclick = function () {
+            var link = "england-wide";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-2").onclick = function () {
+            var link = "east-midlands";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-3").onclick = function () {
+            var link = "east-of-england";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-4").onclick = function () {
+            var link = "london";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-5").onclick = function () {
+            var link = "north-east";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-6").onclick = function () {
+            var link = "north-west";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-7").onclick = function () {
+            var link = "south-east";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-8").onclick = function () {
+            var link = "south-west";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-9").onclick = function () {
+            var link = "west-midlands";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-10").onclick = function () {
+            var link = "yorkshire";
+            document.getElementById("question-form").action=link;
+          }
 
 </script>
 
