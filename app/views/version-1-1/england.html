@@ -1,0 +1,192 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Which region are you in? | Find a Kickstart Gateway
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" class="form" id="question-form" action="east-midlands">
+
+        <fieldset class="govuk-fieldset" id="where_fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+                Which region are you in?
+            </h1>
+          </legend> 
+          <div class="govuk-form-group">
+              <div class="govuk-radios">
+                  
+                  
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="radios-2" name="place" type="radio" value="nationwide">
+                      <label class="govuk-label govuk-radios__label" for="radios-2">
+                        East Midlands
+                      </label>
+                      <div class="govuk-hint govuk-radios__hint">
+                          Derbyshire, Nottinghamshire, Lincolnshire, Leicestershire, Northamptonshire, Rutland
+                        </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="radios-3" name="place" type="radio" value="nationwide">
+                        <label class="govuk-label govuk-radios__label" for="radios-3">
+                          East of England
+                        </label>
+                        <div class="govuk-hint govuk-radios__hint">
+                            Cambridgeshire, Norfolk, Suffolk, Essex, Hertfordshire, Bedfordshire
+                          </div>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="radios-4" name="place" type="radio" value="nationwide">
+                          <label class="govuk-label govuk-radios__label" for="radios-4">
+                            London
+                          </label>
+                          <div class="govuk-hint govuk-radios__hint">
+                              Greater London
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="radios-5" name="place" type="radio" value="nationwide">
+                            <label class="govuk-label govuk-radios__label" for="radios-5">
+                              North East
+                            </label>
+                            <div class="govuk-hint govuk-radios__hint">
+                                Northumberland, Tyne and Wear, County Durham, Hartlepool, Middlesbrough, Redcar and Cleveland, Stockton-on-Tees, Darlington
+                              </div>
+                          </div>
+                          <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="radios-6" name="place" type="radio" value="nationwide">
+                              <label class="govuk-label govuk-radios__label" for="radios-6">
+                                North West
+                              </label>
+                              <div class="govuk-hint govuk-radios__hint">
+                                  Cumbria, Lancashire, Greater Manchester, Merseyside, Cheshire
+                                </div>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="radios-7" name="place" type="radio" value="nationwide">
+                                <label class="govuk-label govuk-radios__label" for="radios-7">
+                                  South East
+                                </label>
+                                <div class="govuk-hint govuk-radios__hint">
+                                    Buckinghamshire, Oxfordshire, Berkshire, Hampshire, Surrey, Kent, West Sussex, East Sussex, Isle of Wight
+                                  </div>
+                              </div>
+                              <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="radios-8" name="place" type="radio" value="nationwide">
+                                  <label class="govuk-label govuk-radios__label" for="radios-8">
+                                    South West
+                                  </label>
+                                  <div class="govuk-hint govuk-radios__hint">
+                                      Bristol, Gloucestershire, Wiltshire, Somerset, Dorset, Devon, Cornwall
+                                    </div>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="radios-9" name="place" type="radio" value="nationwide">
+                                    <label class="govuk-label govuk-radios__label" for="radios-9">
+                                      West Midlands
+                                    </label>
+                                    <div class="govuk-hint govuk-radios__hint">
+                                       Staffordshire, Shropshire, West Midlands, Herefordshire, Worcestershire, Warwickshire
+                                      </div>
+                                  </div>
+                                  <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="radios-10" name="place" type="radio" value="nationwide">
+                                      <label class="govuk-label govuk-radios__label" for="radios-10">
+                                        Yorkshire
+                                      </label>
+                                      <div class="govuk-hint govuk-radios__hint">
+                                          North Yorkshire, East Riding of Yorkshire, West Yorkshire, South Yorkshire
+                                        </div>
+                                    </div>
+
+
+                                    <div class="govuk-radios__divider">or</div>
+
+
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="radios-1" name="place" type="radio" value="nationwide">
+                                        <label class="govuk-label govuk-radios__label" for="radios-1">
+                                          Multiple regions
+                                        </label>
+                                      </div>
+
+
+                  
+                </div>
+          </div>
+        </fieldset>
+
+        <button class="govuk-button">Continue</button>
+
+    </form>
+    
+     
+  </div>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<script type="text/javascript">
+
+document.getElementById("radios-1").onclick = function () {
+            var link = "england-wide";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-2").onclick = function () {
+            var link = "east-midlands";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-3").onclick = function () {
+            var link = "east-of-england";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-4").onclick = function () {
+            var link = "london";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-5").onclick = function () {
+            var link = "north-east";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-6").onclick = function () {
+            var link = "north-west";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-7").onclick = function () {
+            var link = "south-east";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-8").onclick = function () {
+            var link = "south-west";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-9").onclick = function () {
+            var link = "west-midlands";
+            document.getElementById("question-form").action=link;
+          }
+
+          document.getElementById("radios-10").onclick = function () {
+            var link = "yorkshire";
+            document.getElementById("question-form").action=link;
+          }
+
+</script>
+
+{% endblock %}

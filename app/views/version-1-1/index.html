@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a Kickstart Gateway
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <img src="../../public/images/kickstart-logo.png" alt="Kickstart Scheme Logo" class="kickstart-logo govuk-!-margin-bottom-9" >
+    </div>
+  </div>
+      
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+            Find a Kickstart gateway
+          </h1>
+          <p>If you’re creating fewer than 30 job placements, use this service to find a Kickstart gateway to apply for a Kickstart Scheme grant for you.</p>
+          <p>The Department for Work and Pensions (DWP) has checked the organisations listed in this service using the <a href="https://www.gov.uk/government/collections/grants-management-function">Cabinet Office Spotlight Tool</a>. The list will be continually updated.</p>
+          <p>Partnering with one of these organisations does not guarantee that you will get Kickstart Scheme funding.</p>
+
+
+
+
+      {{ govukButton({
+        text: "Start now",
+        href: "sector",
+        classes: "govuk-button--start"
+    }) }}
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m related-head">Related help</h3>
+        <ul class="govuk-list">
+            <li><a href="https://www.gov.uk/government/collections/kickstart-scheme">Kickstart Scheme guidance</a></li>
+            <li><a href="https://www.gov.uk/guidance/check-if-you-can-apply-for-a-grant-through-the-kickstart-scheme#if-youre-creating-fewer-than-30-job-placements">Check if you can apply for a grant through the Kickstart Scheme</a></li>
+            <li><a href="https://www.gov.uk/guidance/apply-for-a-grant-through-the-kickstart-scheme">Applying for more than 30 placements</a></li>
+            <li><a href="https://www.gov.uk/guidance/check-if-you-can-apply-for-a-grant-as-a-representative-of-a-group-of-employers-through-the-kickstart-scheme">Find out how you can represent a group of employers</a></li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
