@@ -1,0 +1,133 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a Kickstart Gateway
+{% endblock %}
+
+{% block content %}
+
+
+      
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          <form method="post" class="form" id="question-form" action="county-results">
+          <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                            What county are your roles based in?  </h1>
+                  </legend>
+                  <div class="govuk-form-group">
+                      <div id="autocomplete"></div>
+                    </div>
+              
+                </fieldset>
+              </div>
+
+              <button class="govuk-button">Continue</button>
+
+            </form>
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<script type="text/javascript">
+
+/*global accessibleAutocomplete*/
+function customResults (query, matchedResults) {
+  var results = [
+  { location: 'Buckinghamshire' },
+  { location: 'Bedfordshire' },
+  { location: 'Berkshire' },
+  { location: 'Cambridgeshire' },
+  { location: 'Cheshire' },
+  { location: 'County Durham' },
+  { location: 'Cornwall' },
+  { location: 'Cumbria' },
+  { location: 'Darlington' },
+  { location: 'Derbyshire' },
+  { location: 'Devon' },
+  { location: 'Dorset' },
+  { location: 'Essex' },
+  { location: 'East Sussex' },
+  { location: 'East Riding of Yorkshire' },
+  { location: 'Greater London' },
+  { location: 'Greater Manchester' },
+  { location: 'Gloucestershire' },
+  { location: 'Hampshire' },
+  { location: 'Hartlepool' },
+  { location: 'Herefordshire' },
+  { location: 'Hertfordshire' },
+  { location: 'Isle of Wight' },
+  { location: 'Kent' },
+  { location: 'Lancashire' },
+  { location: 'Leicestershire' },
+  { location: 'Lincolnshire' },
+  { location: 'Merseyside' },
+  { location: 'Middlesbrough' },
+  { location: 'Norfolk' },
+  { location: 'North East Lincolnshire' },
+  { location: 'North Lincolnshire' },
+  { location: 'North Yorkshire' },
+  { location: 'Northamptonshire' },
+  { location: 'Northumberland' },
+  { location: 'Nottinghamshire' },
+  { location: 'Oxfordshire' },
+  { location: 'Redcar and Cleveland' },
+  { location: 'Rutland' },
+  { location: 'Shropshire' },
+  { location: 'Somerset' },
+  { location: 'South Yorkshire' },
+  { location: 'Staffordshire,' },
+  { location: 'Stockton-on-Tees' },
+  { location: 'Suffolk' },
+  { location: 'Surrey' },
+  { location: 'Tyne and Wear' },
+  { location: 'Warwickshire' },
+  { location: 'West Midlands' },
+  { location: 'West Yorkshire' },
+  { location: 'West Sussex' },
+  { location: 'Wiltshire' },
+  { location: 'Worcestershire' },
+  
+  ]
+
+  const checkMatch = results.filter(result => 
+  result.location.toLowerCase().indexOf(query.toLowerCase()) !== -1 // || result.areatype.toLowerCase().indexOf(query.toLowerCase()) !== -1
+ )
+ matchedResults(checkMatch)
+}
+
+function inputValueTemplate (result) {
+return result && result.location
+}
+
+function suggestionTemplate (result) {
+return result && '<span class=\'areaname\'>' + result.location + '</span>' 
+}
+ 
+var element = document.querySelector('#autocomplete');
+accessibleAutocomplete({
+element: element,
+id: 'autocomplete-class',
+source: customResults,
+minLength: 3,
+displayMenu: 'overlay',
+showAllValues: 'true',
+templates: {
+   inputValue: inputValueTemplate,
+   suggestion: suggestionTemplate
+}
+});
+  
+  </script>
+
+{% endblock %}

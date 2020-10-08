@@ -1,0 +1,103 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a Kickstart Gateway
+{% endblock %}
+
+{% block content %}
+
+
+      
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          <form method="post" class="form" id="question-form" action="search-type">
+          <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                            What sector are you in?  </h1>
+                  </legend>
+                  <div class="govuk-form-group">
+                      <div id="autocomplete"></div>
+                    </div>
+              
+                </fieldset>
+              </div>
+
+              <button class="govuk-button">Continue</button>
+
+            </form>
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<script type="text/javascript">
+
+/*global accessibleAutocomplete*/
+function customResults (query, matchedResults) {
+  var results = [
+  { sector: 'Agriculture; plantations; other rural sectors' },
+  { sector: 'Basic metal production' },
+  { sector: 'Chemical industries' },
+  { sector: 'Commerce' },
+  { sector: 'Construction' },
+  { sector: 'Education' },
+  { sector: 'Financial services; professional services' },
+  { sector: 'Food; drink; tobacco' },
+  { sector: 'Forestry; wood; pulp; paper' },
+  { sector: 'Health services' },
+  { sector: 'Hotels; catering; tourism' },
+  { sector: 'Mechanical and electrical engineering' },
+  { sector: 'Media; culture; graphical' },
+  { sector: 'Mining (coal; other mining)' },
+  { sector: 'Oil and gas production; oil refining;' },
+  { sector: 'Postal and telecommunications services' },
+  { sector: 'Public service' },
+  { sector: 'Shipping; ports; fisheries; inland waterways' },
+  { sector: 'Textiles; clothing; leather; footwear' },
+  { sector: 'Transport (including civil aviation; railways; road transport)' },
+  { sector: 'Transport equipment manufacturing' },
+  { sector: 'Utilities (water, gas; electricity)' },
+  { sector: 'Voluntary and community' },
+  
+  ]
+
+  const checkMatch = results.filter(result => 
+  result.sector.toLowerCase().indexOf(query.toLowerCase()) !== -1 // || result.areatype.toLowerCase().indexOf(query.toLowerCase()) !== -1
+ )
+ matchedResults(checkMatch)
+}
+
+function inputValueTemplate (result) {
+return result && result.sector
+}
+
+function suggestionTemplate (result) {
+return result && '<span class=\'areaname\'>' + result.sector + '</span>' 
+}
+ 
+var element = document.querySelector('#autocomplete');
+accessibleAutocomplete({
+element: element,
+id: 'autocomplete-class',
+source: customResults,
+minLength: 3,
+displayMenu: 'overlay',
+showAllValues: 'true',
+templates: {
+   inputValue: inputValueTemplate,
+   suggestion: suggestionTemplate
+}
+});
+  
+  </script>
+
+{% endblock %}

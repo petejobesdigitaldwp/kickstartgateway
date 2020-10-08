@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What is the postcode of your business?
+{% endblock %}
+
+{% block content %}
+
+
+      
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+                  
+          <form method="post" class="form" id="question-form" action="postcode-results">
+          <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                        What is the postcode of your business? </h1>
+                  </legend>
+
+                  <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+                </fieldset>
+              </div>
+
+              <button class="govuk-button">Continue</button>
+
+            </form>
+
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+   
+</script>
+
+{% endblock %}

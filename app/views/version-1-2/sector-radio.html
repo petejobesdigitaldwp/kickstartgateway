@@ -1,0 +1,77 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find a Kickstart Gateway
+{% endblock %}
+
+{% block content %}
+
+
+      
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          <form method="post" class="form" id="question-form" action="search-type">
+          <div class="govuk-form-group">
+                
+              {{ govukRadios({
+                idPrefix: "where-do-you-live",
+                name: "where-do-you-live",
+                fieldset: {
+                  legend: {
+                    text: "What sector are you in?",
+                    isPageHeading: true,
+                    classes: "govuk-fieldset__legend--xl"
+                  }
+                },
+                items: [
+                { value: "", text: "Agriculture; plantations; other rural sectors" },
+                { value: "", text: "Basic metal production" },
+                { value: "", text: "Chemical industries" },
+                { value: "", text: "Commerce" },
+                { value: "", text: "Construction" },
+                { value: "", text: "Education" },
+                { value: "", text: "Financial services; professional services" },
+                { value: "", text: "Food; drink; tobacco" },
+                { value: "", text: "Forestry; wood; pulp; paper" },
+                { value: "", text: "Health services" },
+                { value: "", text: "Hotels; catering; tourism" },
+                { value: "", text: "Mechanical and electrical engineering" },
+                { value: "", text: "Media; culture; graphical" },
+                { value: "", text: "Mining (coal; other mining)" },
+                { value: "", text: "Oil and gas production; oil refining;" },
+                { value: "", text: "Postal and telecommunications services" },
+                { value: "", text: "Public service" },
+                { value: "", text: "Shipping; ports; fisheries; inland waterways" },
+                { value: "", text: "Textiles; clothing; leather; footwear" },
+                { value: "", text: "Transport (including civil aviation; railways; road transport)" },
+                { value: "", text: "Transport equipment manufacturing" },
+                { value: "", text: "Utilities (water, gas; electricity)" },
+                { value: "", text: "Voluntary and community" }
+                ]
+              }) }}
+
+
+              </div>
+
+              <button class="govuk-button">Continue</button>
+
+            </form>
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<script type="text/javascript">
+
+
+  
+  </script>
+
+{% endblock %}
